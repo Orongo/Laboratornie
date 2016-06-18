@@ -6,5 +6,5 @@ def get_words(lines):
 	return [[i,words[i]] for i in sorted(words, key=words.get, reverse = True)]
 def get_popular(words):
 	return "---" if (len(words)>1) and (words[0][1] == words[1][1]) else words[0][0]
-with open('input.txt','r') as f:
+with open('input5.txt','r') as f:
 	print(get_popular(get_words(f.read())))
